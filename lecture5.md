@@ -13,13 +13,16 @@
 11.bundler,gem インストール<br> 12.環境変数の設定・確認<br>
 13.database.yml を編集（development 環境の passward,host,user）<br>
 14.MySQL 起動<br> 15.データベースを作成・マイグレーション実行<br> 16.手動でプリコンパイル<br>
-17.puma 起動<br> 18.アプリが表示されることを確認<br>
-![](../puma.png)
+17.puma 起動<br>
+18.アプリが表示されることを確認<br>
+<img width="905" alt="puma" src="https://user-images.githubusercontent.com/110516041/218292317-6968ed6b-638b-46f3-87bd-b32e395fd089.png">
+
 
 ## unicorn 単体でサンプルアプリ起動
 
 1.config/unicorn.rb を編集（root パス,ポートログを記録するファイル等指定）<br>
 2.development 環境で unicorn 起動<br> 3.アプリが表示されることを確認
+
 
 ## nginx と unicorn でサンプルアプリ起動
 
@@ -32,9 +35,10 @@
 → 原因は nginx のユーザーが「nginx」だったこと<br>
 10.nginx.conf の user を「ec2-user」に変更<br>
 11.nginx と unicorn を起動<br> 12.アプリが表示されることを確認<br>
-![](../niginx.png)<br>
-![](../nginx_unicorn.png)
-![](<../nginx_unicorn(2).png>)
+<img width="454" alt="niginx" src="https://user-images.githubusercontent.com/110516041/218292365-2f483c4b-fcef-434e-8283-93ee6219f2b6.png">
+<img width="874" alt="nginx_unicorn" src="https://user-images.githubusercontent.com/110516041/218292347-9363c8a9-efa7-4c56-821d-aae2ba2c2c4f.png">
+<img width="800" alt="nginx_unicorn(2)" src="https://user-images.githubusercontent.com/110516041/218292352-a3da89a9-16ac-4874-806c-c46053ce3ee6.png">
+
 
 ## ELB 追加
 
@@ -42,8 +46,9 @@
 3.ELB のセキュリティグループを作成・設定<br>
 4.EC2 のセキュリティグループを修正し、ELB からの接続を許可<br>
 5.ELB を作成し ELB 用セキュリティグループを登録<br> 6.ヘルスチェックで「healthy」と表示されていることを確認<br> 7.ブラウザで http://[DNS 名]でアクセスし、アプリが表示されることを確認<br>
-![](../ELB.png)<br>
-![](<../ELB(2).png>)
+<img width="957" alt="ELB" src="https://user-images.githubusercontent.com/110516041/218292371-ac07a711-4638-4243-974e-04002f432d71.png">
+<img width="878" alt="ELB(2)" src="https://user-images.githubusercontent.com/110516041/218292377-7e895ef5-2780-4645-942e-b25f54bd7901.png">
+
 
 ## S3 バケット追加
 
@@ -58,13 +63,15 @@
 4.nginx.conf を編集し直したところ、エラー解決<br> 5.サンプルアプリが動作するようになったものの、画像が表示されない<br> 6.「Image magick をインストールして」というエラーを確認<br>
 7.Image magick をインストール<br> 8.画像が表示されるようになった<br>
 9.S3 にも保存されていることを確認<br>
-![](../S3.png)<br>
-![](<../S3(2).png>)
+<img width="960" alt="S3" src="https://user-images.githubusercontent.com/110516041/218292391-d3a8c3ee-b43a-4c13-8f1e-9536d5b84b6e.png">
+<img width="907" alt="S3(2)" src="https://user-images.githubusercontent.com/110516041/218292404-fd55ad4b-4185-4c26-bdb3-f93e82a63458.png">
+
 
 ## 構成図
 
 Raistech ポータルの動画学習教材を参考に dorawio で作成<br>
-![](../%E7%AC%AC5%E5%9B%9E%E8%AA%B2%E9%A1%8C%E6%A7%8B%E6%88%90%E5%9B%B3.drawio.png)
+![第5回課題構成図 drawio](https://user-images.githubusercontent.com/110516041/218292410-f5377924-eb19-4038-a92a-162b8ad8ca76.png)
+
 
 ## 感想
 
