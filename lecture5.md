@@ -35,7 +35,7 @@
 → 原因は nginx のユーザーが「nginx」だったこと<br>
 10.nginx.conf の user を「ec2-user」に変更<br>
 11.nginx と unicorn を起動<br> 12.アプリが表示されることを確認<br>
-<img width="454" alt="niginx" src="https://user-images.githubusercontent.com/110516041/218292365-2f483c4b-fcef-434e-8283-93ee6219f2b6.png">
+<img width="800" alt="niginx" src="https://user-images.githubusercontent.com/110516041/218292365-2f483c4b-fcef-434e-8283-93ee6219f2b6.png">
 <img width="800" alt="nginx_unicorn" src="https://user-images.githubusercontent.com/110516041/218292347-9363c8a9-efa7-4c56-821d-aae2ba2c2c4f.png">
 <img width="800" alt="nginx_unicorn(2)" src="https://user-images.githubusercontent.com/110516041/218292352-a3da89a9-16ac-4874-806c-c46053ce3ee6.png">
 
